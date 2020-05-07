@@ -1,7 +1,7 @@
 
 # Languages
 
-Aplikacja służy do fiszkowania użytkownika ze słówek w języku obcym.
+Aplikacja mojego autorstwa służąca do fiszkowania użytkownika ze słówek w języku obcym.
 Baza słówek jest bieżąca (podczas działania aplikacji jest to lista słówek) lub zapisana jako pliki. Aplikacja może być uruchamiana ikoną na pulpicie.
 
 1. Pasek menu, a w nim opcje import/export data oraz wybieranie które części aplikacji mają być widoczne (możliwe, że użytkownik chce tylko przeglądać albo tylko umieszczać słówka w bazie)
@@ -11,7 +11,8 @@ Baza słówek jest bieżąca (podczas działania aplikacji jest to lista słówe
 ( ID, Phrase[wyrazenie w jez. obcym], Polish, Language, Level)
 5. Wczytywanie/zapisywanie danych z/do plików poprzez de/serializację listy słówek
 - możliwość filtrowania plików
-6. Moduł Test - testowanie się z wybranych słówek, 
+6. Moduł Test 
+- testowanie się z wybranych słówek, 
 - możliwość wybrania ilości słówek,
 - możliwość wybrania czy tłumaczy się z języka polskiego czy na język polski
 - okienko z wynikiem
