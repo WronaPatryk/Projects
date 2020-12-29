@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="content-type"
+		  content="text/html; charset=utf-8"/>
+	<meta name="description" content = "Do what You wanna do with ANY kind of package to send!"/>
+	<meta name="keywords" content = "deliver, package, mail"/>
+	<link rel="shortcut icon" href="#" />
+
+	<link rel="stylesheet" href="leaflet.css" />
+    <link rel="stylesheet" href="style.css" />
+
+
+    <script type="text/javascript" src="leaflet.js"></script>
+    <script type="text/javascript" src="map.js"></script>
+	<script type="text/javascript" src="submit.js"></script>
+	<script type="text/javascript" src="orders.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="MovingMarkerSlideTo.js"></script>
+
+   
+	<title>Magic package delivery tool</title>
+</head>
+
+<body>
+
+<div id = "title">	
+	<h1><span>MAGIC PACKAGE DELIVERY TOOL</span></h1>
+</div>
+
+<!-- PACKAGE PART -->
+
+<div id = "info">
+
+	<p>Pickup or maybe delivery? </br>
+	It makes no difference, because for us nothing is impossible! </p>
+	<img width = "300" src="img/magic_package.png" alt="sample package" title="package like THIS">
+	<p>Just enter the details of the action you want to perform below </br>
+	and we will complete your transaction within the specified time (up to 5 working days)</p>
+
+</div>
+
+<div id="js-map-container" class="map-container"></div>
+<div id="hurray"></div>
+
+<div id = "form" style="font-size: 4" >
+
+	<h3>Please give all related details.</h3>
+
+	<div >
+		<div class="questions">
+			<div><label for="textField1" >Name:</label></div>
+			<div><label for="textField2">Surname:</label></div>
+			<div><label for="textField3">Address:</label></div>
+			<div><label for="textField3_2">Location:</label></div>
+			<div><label for="textField4">Country:</label></div>
+			<div><label for="textField5">Contact number:</label></div>
+			<div><label for="textField6">Weight [kg]:</label></div>
+			<div><label for="mapCheckbox">Show map?</label></div>
+		</div>
+			
+		<div class="userdata">
+			<div><input type="text" id="textField1" required="true"  name="nameField"></div>
+			<div><input type="text" id="textField2" required="true" name="surnameField"></div>
+			<div><input type="text" id="textField3" name="addressField" placeholder = "write or click on map"></div>
+			<div><input type="text" id="textField3_2" required="true" name="locationField"></div>
+			<div><input type="text" id="textField4" name="countryField"></div>
+			<div><input type="text" id="textField5" required="true" name="contactField"></div>
+			<div><input type="text" id="textField6" required="true" name="weightField"></div>
+			<div><input type="checkbox" id="mapCheckbox" name="mapCheckbox" value="Show map"></div>
+		</div>
+	</div>
+		
+	<br>
+	<div class="bottom">
+		<input type="radio" id="transportType1"
+		 name="transport" value="pickup">
+		<label for="transportType1">pickup</label>
+
+		<input type="radio" id="transportType2"x
+		 name="transport" value="deliver">
+		<label for="transportType2">deliver</label>
+		</br></br>
+		(Costs of delivery to your home - 10 $.)
+
+		<p style="color: blue; font-size: 19px">All right? For sure?</p>
+	</div>
+
+
+	<form id="hurraySubmit" onclick = "hurrayJavaScript()">
+		<button type="button">Make a transaction</button>
+	</form>
+	<form id="seeOrders" onclick = "seeYourOrders()">
+		<button type="button">See your orders</button>
+	</form>
+
+	</br>
+</div>
+
+
+
+<div id="allTheOrders"><p hidden>"0000"</p>
+	<p hidden>This paragraph should be hidden.</p>
+</div>
+
+
+<br>
+
+<div id = "packageChange">
+<p style = "clear:both; text-align: center;">Want to change some order?</p>
+
+<div id="deleteSelectDiv" style="margin: 3px">
+	<select id ="deleteSelect">
+		<option value=1>Johny Bravo</option>
+		<option value=2>Kuba Kosterna</option>
+	</select>
+</div>
+<button type="button" id="deleteButton" onclick = delete1order() style="margin: 3px">Delete this order</button>
+<br>
+<button type="button" id="putButton" onclick = putOrder() style="margin: 3px">Change this order to Marek Gągolewski</button>
+<br>
+<br>
+<form id="takeoffButton" onclick = "airplaneTakeOff()" style="margin: 3px">
+	<button type="button">Airplane take-off!</button>
+</form>
+
+</div>
+
+<br>
+<br>
+
+<!-- VEHICLE PART -->
+
+<div id = "infoAircraft">
+	<p>Boeing or Embraer? </br>
+		It makes no difference, because for us nothing is impossible! </p>
+	<img width = "300" src="img/airplane.png" alt="sample aircraft" title="airplane like THIS">
+	<p>Just enter in the right the details of the aircraft you want to add </br>
+		and we will add your favorite new airplane to the storage. </br></br>
+		1. Calculate routes for your airplanes-packages set. </br>
+		2. Draw lines to see which routes will each airplane take. </br>
+		3. Take-off with the above button to see the delivery animation.</br>
+	<p style = 'text-align: center'> Your current airplanes: </p></p>
+</div>
+
+
+<div id = "aircraftForm">
+
+	<h3>If you buy a new airplane, please add it.</h3>
+
+	<div>
+		<div class="questions">
+			<div><label for="vehicleField1" >Type:</label></div>
+			<div><label for="vehicleField2">Capacity [kg]:</label></div>
+			<div><label for="vehicleField2">Velocity [m/s]:</label></div>
+		</div>
+
+		<div class="userdata">
+			<div><input type="text" id="vehicleField1" required="true"  name="nameField"></div>
+			<div><input type="text" id="vehicleField2" required="true" name="surnameField"></div>
+			<div><input type="text" id="vehicleField3" required="true" name="velocityField"></div>
+		</div>
+		</br>
+	</div>
+	</br></br>
+
+	<div class = "bottom">
+		</br>
+		<button onclick = "postNewAirplane()" id="postNewAirplaneSubmit" type="button">Add an airplane</button>
+
+			<button onclick = "calculateRoutes()" id="seeAirplanesButton" type="button">Calculate Routes</button>
+			</br>
+			<button onclick = "drawLines()" id="drawLinesButton"  type="button">Draw lines</button>
+	</div>
+
+</div>
+
+<div id ="airplaneChange"  style="clear:both">
+	<div id="airplaneSelectDiv" style="margin: 3px">
+		<select id ="airplaneSelect">
+			<option value=1>Johny Bravo</option>
+			<option value=2>Kuba Kosterna</option>
+		</select>
+	</div>
+</div>
+
+<!-- SPONSORS -->
+<div id="sponsors">
+	</br>
+	<h4>Check out our sponsors!</h4>
+	<a href="https://www.toitoi.pl/" target="_blank">TOI TOI</a>
+	<a href="http://mcdonalds.com/" target="_blank">Mc Donald's</a>
+	<a href="https://www.kfc.com/" target="_blank">KFC</a>
+	<a href="https://www.linux.com/" target="_blank">Linux</a>
+</div>
+
+</body>
+</html>

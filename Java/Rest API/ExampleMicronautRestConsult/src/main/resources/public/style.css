@@ -1,0 +1,175 @@
+body
+{
+	background-image: url("img/background.jpg");
+	font-family: verdana;
+	color: white;
+}
+
+#title
+{
+	color: #fff;
+	text-align: center;
+}
+
+span
+{
+	display: block;
+	background-image: url(img/fireball.png);
+	-webkit-background-clip:text;
+	-webkit-text-fill-color:transparent;
+	-webkit-animation:fire 6s linear infinite;
+	-webkit-backface-visibility:hidden;
+}
+
+@keyframes fire {
+	0%{background-position: 0% 100%;}
+	0%{background-position: 0% 100%;}
+}
+
+#info
+{
+	text-align: center;
+	float: left;
+	width: 50%;
+}
+#infoAircraft
+{
+	text-align: center;
+	float: left;
+	width: 50%;
+}
+
+#form
+{
+	float: right;
+	text-align: center;
+	background-color: ghostwhite;
+	color: black;
+	width: 40%;
+	border-style: solid;
+	border-width: 5px;
+	border-color: darkmagenta;
+	margin-right: 30px;
+
+	height: 395px;
+    overflow: auto;
+}
+#aircraftForm
+{
+    float: right;
+    text-align: center;
+    background-color: ghostwhite;
+    color: black;
+    width: 40%;
+    border-style: solid;
+    border-width: 5px;
+    border-color: darkmagenta;
+    margin-right: 30px;
+    min-height: 400px;
+}
+
+.questions
+{
+	float: left;
+	width: 40%;
+	text-align: right;
+	margin-right: 5%;
+	line-height: 1.5;
+}
+.userdata
+{
+	float: left;
+	line-height: 1.5;
+}
+
+.bottom
+{
+	clear: both;
+}
+
+#sponsors
+{
+	text-align: center;
+	clear: both;
+}
+
+h3
+{
+	color: blue;
+}
+
+h4
+{
+	color: lightblue;
+}
+
+
+.floated {
+   float:left;
+   margin-left:20px;
+   text-align: center;
+}
+
+#js-map-container
+{
+    border: 7px solid darkmagenta;
+    float: left;
+	width: 50%;
+    height: 386px;
+	display: none;
+	margin-left: 30px;
+}
+
+
+#hurraySubmit
+{
+	margin-left: 20%;
+	margin-right: 10%;
+	min-width: 20%;
+	float: left;
+}
+
+
+
+#seeOrders
+{
+	width:30%;
+	float: left;
+}
+
+
+
+.layout-container
+{
+	float: left;
+	text-align: center;
+}
+
+.floated
+{
+    float: center;
+}
+
+.Disabled{
+  pointer-events: none;
+  cursor: not-allowed;
+  opacity: 0.65;
+  filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+#packageChange{
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 50%;
+}
+#airplaneChange{
+width: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+left: 50%;
+}

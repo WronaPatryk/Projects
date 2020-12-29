@@ -1,0 +1,1 @@
+Johny,Hathorne,Reims,"(49.250641, 4.021814)",France,111000333,true
