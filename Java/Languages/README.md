@@ -1,5 +1,5 @@
 
-# Languages
+# Languages - Swing application
 
 Aplikacja mojego autorstwa służąca do fiszkowania użytkownika ze słówek w języku obcym.
 Baza słówek jest bieżąca (podczas działania aplikacji jest to lista słówek) lub zapisana jako pliki. Aplikacja może być uruchamiana ikoną na pulpicie.
