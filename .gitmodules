@@ -4,3 +4,6 @@
 [submodule "Machine Learning/clustering/MachineLearningOnGraphs/MLonGraphs"]
 	path = Machine Learning/clustering/MachineLearningOnGraphs/MLonGraphs
 	url = https://github.com/WronaPatryk/MLonGraphs.git
+[submodule "Machine Learning/deep_learning/Graph Neural Networks/MLonGraphsGNN"]
+	path = Machine Learning/deep_learning/Graph Neural Networks/MLonGraphsGNN
+	url = https://github.com/WronaPatryk/MLonGraphsGNN.git
