@@ -1,0 +1,9 @@
+[submodule "Machine Learning/deep_learning/Recurrent Neural Networks/iasr-project"]
+	path = Machine Learning/deep_learning/Recurrent Neural Networks/iasr-project
+	url = https://github.com/WronaPatryk/iasr-project.git
+[submodule "Machine Learning/clustering/MachineLearningOnGraphs/MLonGraphs"]
+	path = Machine Learning/clustering/MachineLearningOnGraphs/MLonGraphs
+	url = https://github.com/WronaPatryk/MLonGraphs.git
+[submodule "Machine Learning/deep_learning/Graph Neural Networks/MLonGraphsGNN"]
+	path = Machine Learning/deep_learning/Graph Neural Networks/MLonGraphsGNN
+	url = https://github.com/WronaPatryk/MLonGraphsGNN.git
